@@ -1,61 +1,51 @@
-# Case of Study Title
+# Wildfire Impacts on Air Quality and Human Health
 
-Simple overview of the use and purpose of this case of study.
+This repository contains code developed for the wildfire-related health use case of the ESA CHANGE project.
 
-## Description
+## Overview
 
-An in-depth paragraph about your case of study and overview of use.
+The current version of the repository includes the machine-learning workflow used to generate global future burned area projections under SSP scenarios.
 
-## Getting Started
+The model uses environmental and climate predictors to estimate future burned area and forms part of the workflow used to assess future wildfire impacts on air quality and human health.
 
-### Dependencies
+## Code
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* Python version >=3.8
+### `scripts/Ensemble_ssp.py`
 
-### Installing
+Machine-learning workflow used to generate future global burned area projections under SSP scenarios.
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+The script is associated with the training data archived on Zenodo.
 
-### Executing program
+## Data
 
-* How to run the program
-* Step-by-step bullets
+The training data and archived version of the script are available from Zenodo:
 
-```
-code blocks for commands
-```
+**Zenodo record:** 16927100
 
-## Help
+The Zenodo archive contains:
 
-Any advise for common problems or issues.
+- `Ensemble_ssp.py`
+- `training data.zip`
 
-```
-command to run if program contains helper info
-```
+The training dataset is not duplicated in this GitHub repository because of its size.
 
-## Authors
+## Requirements
 
-Contributors names and contact info
+The workflow requires Python 3 and commonly used scientific Python packages, including:
 
-ex. Dominique Pizzie
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+- NumPy
+- pandas
+- scikit-learn
+- XGBoost
+- Matplotlib
 
-## Version History
+Additional package requirements may depend on the local computing environment.
 
-* 0.2
-  * Various bug fixes and optimizations
-  * See [commit change]() or See [release history]()
-* 0.1
-  * Initial Release
+## Usage
 
-## License
+Download the training data from Zenodo and place the required input files in the directory expected by `Ensemble_ssp.py`.
 
-This project is licensed under the MIT License of 2023 ESA Climate Change Initiative - see the LICENSE file for details.
+Run the workflow with:
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-
+```bash
+python scripts/Ensemble_ssp.py
